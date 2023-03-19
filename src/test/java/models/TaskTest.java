@@ -71,6 +71,7 @@ public class TaskTest {
 
     @Test
     public void findReturnsCorrectTaskWhenMoreThanOneTaskExists() throws Exception {
+        //comment
         Task task = setupNewTask();
         Task otherTask = new Task("Brush the cat");
         Assertions.assertEquals(2, Task.findById(otherTask.getId()).getId());
