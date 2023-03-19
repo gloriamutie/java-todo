@@ -25,15 +25,6 @@ public class App {
 
         port(port);
 
-        // //get: delete all tasks
-        // get("/tasks/delete", (req, res) -> {
-        //     Map<String, Object> model = new HashMap<>();
-        //     Task.clearAllTasks();
-        //     res.redirect("/");
-        //     return null;
-        // }, new HandlebarsTemplateEngine());
-
-        //get: delete an individual task
         get("/tasks/:id/delete", (req, res) -> {
             Map<String, Object> model = new HashMap<>();
             int idOfTaskToDelete = Integer.parseInt(req.params("id")); //pull id - must match route segment
